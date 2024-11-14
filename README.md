@@ -1,6 +1,6 @@
 # Streaming-services-with-a-user-centric-approach-using-DRL
 
-IEEE </br>
+publisher: IEEE </br>
 International Conference on Information Networking 2023 (ICOIN)
 
 ## abstract
