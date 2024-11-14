@@ -1,5 +1,8 @@
 # Streaming-services-with-a-user-centric-approach-using-DRL
 
+IEEE </br>
+International Conference on Information Networking (ICOIN)
+
 ## abstract
 - In this work, we propose a novel method to dynamically adjust bandwidth, power, and quality while considering the user's residual data availability in a video streaming environment utilizing cellular data.
 - The method is designed to ensure the best video quality without exceeding the user's data usage limit through deep reinforcement learning. The main goal is to maximize the user's quality of experience (QoE) through efficient resource allocation.
