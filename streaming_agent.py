@@ -29,7 +29,6 @@ class CustomEnv(gym.Env):
 # Main 함수
 if __name__ == '__main__':
     env = CustomEnv()
-    env = Monitor(env)
     model = PPO("MlpPolicy", env, verbose=1, tensorboard_log="./logs/")
     eval_callback = EvalCallback(env, eval_freq=100, deterministic=True, render=False)
     model.learn(total_timesteps=100000, callback=[eval_callback])
