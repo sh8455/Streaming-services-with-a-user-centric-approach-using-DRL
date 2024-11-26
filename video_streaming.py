@@ -262,7 +262,6 @@ class VideoStreaming:
             elif quality_loss > 0:
                 quality_loss = -quality_loss
                 
-            # qoe = 0.3 * quality_loss + 0.25 * quality_diff + 0.15 * buffer_diff + 0.3 * user_dr
             qoe = current_quality + user_dr + quality_diff + buffer_diff + quality_loss
             latency = -(buffer_off_time + rebuffering_time)
             
@@ -391,13 +390,6 @@ class VideoStreaming:
                 self.users[i]['current_chunk_num'] += 1
                 self.users[i]['play_wait'].put(self.users[i]['current_chunk_num'])
                 print(f"User{i} Input Chunk: {self.users[i]['current_chunk_num']}")
-            
-            # # 큐에 5개 이상의 청크가 차 있으면 재생 시작 (한 청크씩 재생)
-            # if self.users[i]['videobuffer']:
-            #     if self.users[i]['play_wait'].qsize() >= 5:
-            #         current_chunk = self.users[i]['play_wait'].get()
-            #         self.users[i]['videobuffer'] -= self.chunk_length
-            #         print(f"User{i} Chunk[{current_chunk}] is Playing...")
                     
         print(f"Current Time Step is {self.time_step}")
         
