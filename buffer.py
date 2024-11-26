@@ -402,9 +402,6 @@ class VideoStreaming:
             current_data_availability = self.users[current_user]['monitor_data_availability'][self.time_step - 1] - transmit_mb
         self.users[current_user]['monitor_data_availability'].append(current_data_availability) 
         
-        # current_data_availability = self.data_availability - self.current_data_availability
-        # self.monitor_data_availability.append(current_data_availability)
-        
         current_download_percentage = (download_in_current_step / chunk_size) * 100
         self.users[current_user]['step_percentage'].append(current_download_percentage)
         return chunk_size, download_time, Residual, current_download_percentage
